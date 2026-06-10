@@ -3,6 +3,7 @@ const path = require("path");
 console.log(
     path.join(__dirname, "credentials.json")
 );
+console.log("Hey");
 const auth =
     new google.auth.GoogleAuth({
         //keyFile: path.join(__dirname, "credentials.json"),
