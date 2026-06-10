@@ -6,17 +6,11 @@ console.log(
 const auth =
     new google.auth.GoogleAuth({
         //keyFile: path.join(__dirname, "credentials.json"),
-        //credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS),
-        //keyFile: process.env.GOOGLE_CREDENTIALS,
-        //credentials: {
-        //client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-        //private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-    //},
-    keyFile: {
+        credentials: {
   "type": "service_account",
   "project_id": "gsheets-test-424420",
-  "private_key_id": "5e9b8f3e2733cfc0e9f9ba48d1c07e3d11cf36a9",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDApK/pEWKnBvYH\n98Rk4200IU56yUPSjqFJXzSvJNvPWk8KguyUyQJH+b3u92RUjaifQ/BMvG66h+Jr\ndZ2ehMo5YAdPF9HKWWUsp2GT1tn+YN2tkHVJ8fIWGlrx8xdgPKn0rOSzfVTqTYr3\nlnG6NiPVDF2fRkQvpHiW1m5MLNuIyAuMePiIC8cjwFAY5azQo9ofmAM+gKC6fqeL\ndmIaS0RFjBJ9vLRh3DuChfty3zfW2CQYMLSmW24frod69dow9fFsjcm15Q/Aphqb\nGTZhlThNyfIIfSBl9w7rXFa8V18kNOsFparWJCZ9he60tOVneQTpinDTIjPRbXWe\nIIpokpe5AgMBAAECggEAAJ3eWB+HlRuLzijOwq3AMnMmAvUHOq1dH+TLlevHKNsk\nBuIg/f/FOjlW+xokt/O9TbzhesC9KtYcb/s1ckBq/HidrrUCWsntuHEqOgINcAJ7\nydkSfmEQBR5X5W+hkZEsJZsn6cOtpzOGQvvi2Lrg4zxp2ySgpgA6UxhJYYTLaJ0N\nkD4ddsveVlVC3/8jwYrDsAQTZYsgZtEffqnGxD3iOVhBbZ+m/VTUYjFvFNl/+To7\nXdI/bz7TcO26/OjLj8Hv8mg/iLvIEKJ1lMEuhDjdc+qvvFdmsoU9BMgi+FR2JbFH\nlq3lUXugBAqzDJ+pmasolKhKwSiGlRc85D7F5kZIwQKBgQDwxpwoYSSnZb1VzBTs\nCLR2iKGPRigHXFgu0os/93bMzlp67SzSeU6nt9OZaD1SEGy/51p7vjl013XYtFgx\npS0GveIQqVqgTHhsIOtGcxnUxPdjFicOSWN+StV6emqua/4WO47XsxmDoQ7qH/rz\nnpKSa3SGZtgOu291zJxzx35lQQKBgQDM0vdBCD6qwhyNe+4WO0aChElifJ00NMiw\nz12eRnDao0zrC6i1cJQGxfzW8Sl12BDgPH5BQOTIuG2pklvMyMyVDBZqHEXwpjrx\nYZss6MeLDWgOrw4UPbQbtkBJW+NC3GcYXEj1wdiOa/BFhXgIDqXGQQZP9+vkKxvD\nvcp7wDm8eQKBgGflzEzAXoi9pk33mq+fsf/URaMFqxBCEOtjfyNDLciC4xhYcBcC\nsaY99Nkl2hAndkX5F1p+Y1y//OJeMBB8LknSdlKqQakaVnySV/Q2htcBh58CWCga\nEwzUTfpkCNTrVOFTIfiCGGhsf3sYAbpOmwEDzWyRxHnW9+nlOT3cv/YBAoGBALWf\nKHJ5HiCKqYjn6LG79AUNyojTWQ6O85qc9jW/3phxD2ao2vuwjQIIk/AAvrPpWOWN\nnqK8KWK27z7bMh2/vHE527JRyc7fiAq8cz36V968j5Xdsk1OfaPJEu451aZXC+/0\n/Rk2v5FisxbiiBIU8vh+dlt4yqpzc1Y5uA/N3yR5AoGAcUlNfSOBZ2I9zurjvRMw\nQ3+hM1ZxzgOtKfK4aqMFBM7EaiJ1eeVI1iPlGhFHfGm9VkSwKb7ubJyx7ZWYmysD\n619w0wal+A6G4XuzxpO3LmcfAV+164dWaScWtSuqGS4b19ia6zPgkQBedKHcJoRk\nwqmOi8PNLnjvIkM704VWV6Q=\n-----END PRIVATE KEY-----\n",
+  "private_key_id": "8e08d840bae5d242d0ade73a57d12418d14bb3a6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDRgaMJ/VQU5JXl\nSs98a9IBOgN0riZlfZQPQ0v/4MeFs4Z60ewxvaM5Vl9g7u6TTUL6BP37iA+g2baC\nBhnxggrcJZaetJzfcwvWgyFJsupUdMKqZ9weEB19AXxp8P184rl4R+cA3zsgS+7n\nSIG3fi6f2Wtaf+VTk8RXAxZp2DzJWb71h3YMo5nkC4QOvDpyCQQxjOBq0IJoVY67\nUEZcj3wbsNNI9Cbx0RyesYhG+6O/X6ZfOFKm551rCuZXJbkAiwTkvZEwzVt3uA5C\nNtveUSDN6ar1q8F0dJlwZay32yEUiva6PGUTS3tZhvUicQGXEXzCfQxbuE05LlpK\nooc8VePTAgMBAAECggEAHpdo2KESgXh9QL1jPZ46zG4NqiBxv9kN4QqpEsReLfIw\nXUfAzuSLbGhlxfAtivm5oWtQMMXFzm1r3mGIsUCVWF7utt7VlzUj0d9U4X+MAugH\nsr02oXcl7yZj5c5IHU+32E3bd7+g0Q71Y/Us57+3jCTBrbXGJSWLAk+TmsH14kqC\nWPYzLDZpUCuCNUVpKru3Oem1rkeuNPgcudLTL0vbQAL66mPx9DMKaT9qnDPTnpK8\nV0AOZcFvslT/K9mLbRFvFqH50bkdCwc/NWULE76vjpGO6nn35DBg5jlznHsyLUbN\ns6k6fuaIW4aPs2wvevAfvRl7Sc6sygKVKItqFotDAQKBgQDrVPkazJJ+CnLKpMI2\nlX3HRLRzGL70PTWysQO7ExLB9MuSMHUOmEKrDsZRaoe0/jbafc9KtryMbVIzukQr\nSNPNv2GTSWSwoYNKDweOL7/sZrsWaz1TzOfCmS4pg5AYwO13DYu0OQC5asZSt3uu\nRfAE0bnt1rPm4NujJ/v4Z/yI0wKBgQDj6AWZLsUGwQ6D3PBOTrkeQD7UctD6KTCW\nZN2JsSzwaGd4TRt54exTWhKEK5YBcXhU1gROm5IPwNs1DtnJyRTNSa+2YMhuX8un\nHfozwHhssfMjcnp07T6PvtLFKYtJKPXR5ZDrRl4y+F8y52j5uOk36vOAqeihBRNL\nynmm1xhZAQKBgHMSU9SE38T9+u+X7Nef9abws4PsP8NSAuXjpL1fMDbjKn/LbhG6\n5i6axOKewsj/3XatOiWAgWXxNtbQZ/D6ZYcf4+iPZMrxzy7xdnJSavh/q0/lFFHb\nyh/fozDtghJ4lCU43G09ylrgGSXtTm8DB8BzhQUFjWaB4SRAsvbech+9AoGAGcEo\nkMz2OvMqHsCi71Z6GO8NqphnAT4SXYx8dIjvGSPTPYcJKdbcC/dLzF/YjcUy4fNl\nfTSbZuhWXUKWXfU5QpGnJ6b8P2zX6MS8d4iykyXw4fqX2ArPXRMlYl51fQkB7nxQ\nyiWjk4L5zxjThhTdVhJY/hs1TKz0J0Z0RORdvgECgYEA05JjiuNUOK5JIJipMdRi\n+y/A1+5Geb3lCOTAXEY5+ZZ/YfeCoobzDRmcBoJhr/Iidj4+vhzwIdazn7J1I25J\nELvTvA9sHH2vsMq6+dD44g9Z+tSs8zsnmxMO03cXkgwY9akN7HAP25O3zUtFU0UV\nKSK/4snX2rewIv9bx5GDp/U=\n-----END PRIVATE KEY-----\n",
   "client_email": "amintest@gsheets-test-424420.iam.gserviceaccount.com",
   "client_id": "112071159826014879004",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
@@ -24,9 +18,8 @@ const auth =
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/amintest%40gsheets-test-424420.iam.gserviceaccount.com",
   "universe_domain": "googleapis.com"
-}
-,
-    scopes:["https://www.googleapis.com/auth/spreadsheets"]
+},
+        scopes:["https://www.googleapis.com/auth/spreadsheets"]
     });
 
 const spreadsheetId = "1XM2C6J7kmf7oR6LKnAFmEO645GZqqhBHVL-jiQqv53w";
