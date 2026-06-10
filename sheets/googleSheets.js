@@ -22,6 +22,7 @@ const auth =
         scopes:["https://www.googleapis.com/auth/spreadsheets"]
     });
 
+    
 const spreadsheetId = "1XM2C6J7kmf7oR6LKnAFmEO645GZqqhBHVL-jiQqv53w";
 const sheetName = "Sheet1";
 
@@ -131,7 +132,7 @@ async function appendRow(values)
             auth:client
         });
 
-    await ensureHeaderRow(sheets);
+    //await ensureHeaderRow(sheets);
 
     const sheet2 = await sheets.spreadsheets.values.get({
         spreadsheetId,
